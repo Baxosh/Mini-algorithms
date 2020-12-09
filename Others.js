@@ -606,15 +606,174 @@ function maxLengthCheck(object)
 // console.log(middle_three('PHP'))
 // console.log(middle_three('Exercises'))
 
+/// Odd number and Even number
 
-      /// Odd number and Even number
+// function isOdd(value) {
+//   return (value % 2)     //  !(value % 2) this is even number
+// }
+// console.log("1 is " + isOdd(1));
+// console.log("2 is " + isOdd(2));
+// console.log("3 is " + isOdd(3));
+// console.log("4 is " + isOdd(4));
+// console.log("5 is " + isOdd(5));
+// console.log("7 is " + isOdd(7));
 
-              // function isOdd(value) {
-              //   return (value % 2)     //  !(value % 2) this is even number
-              // }
-              // console.log("1 is " + isOdd(1));
-              // console.log("2 is " + isOdd(2));
-              // console.log("3 is " + isOdd(3));
-              // console.log("4 is " + isOdd(4));
-              // console.log("5 is " + isOdd(5));
-              // console.log("7 is " + isOdd(7));
+//  Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.
+
+// function str_con_cat(str1, str2) {
+//   const m = Math.min(str1.length, str2.length);
+
+//   return str1.substring(str1.length - m) + str2.substring(str2.length - m);
+// }                  /// this is useful
+
+// console.log(str_con_cat("Python", "JS"));
+// console.log(str_con_cat("ab", "cdef"));
+
+// Write a JavaScript program to test whether a string end with "Script". The string length must be greater or equal to 6.
+
+// const testingScript = (str) => {   // My code <<<=====
+
+//   let regExp = /Script$/g
+
+//   return regExp.test(str)
+// }
+
+// console.log(testingScript("JavaScript"))
+// console.log(testingScript("aasdScriptPht"))
+// console.log(testingScript("PHPscript"))
+// console.log(testingScript("JavaScript"));
+// console.log(testingScript("Java Script"));
+// console.log(testingScript("Java Scripts"));
+
+//   // >>>> ========== <<<<
+
+// function end_script(str) {  // w3resources code <<<=====
+//   if (str.substring(str.length - 6, str.length) == 'Script')
+//   {
+//     return true;
+//   }
+//   else
+//   {
+//     return false;
+//   }
+// }
+// console.log(end_script("JavaScript"));
+// console.log(end_script("Java Script"));
+// console.log(end_script("Java Scripts"));
+
+// Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
+
+// function cityName(str) {
+//   if ( str.substring(0, 3) == 'Los' || str.substring(0, 3) == 'New' )
+//   {
+//     return str;
+//   }
+//   else
+//   {
+//     return '';
+//   }
+// }
+// console.log(cityName("New York"));
+// console.log(cityName("Washington"));
+// console.log(cityName("Los Angeles"));
+
+// Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'. Return the original string if the condition is not satisfied.
+
+// function nop(str) {
+//   let start_pos = 0;
+//   let end_pos = str.length;
+
+//   if (str.length > 0 && str.charAt(0) == 'P')
+//     {
+//       start_pos = 1;
+//     }
+
+//   if (str.length > 1 && str.charAt(str.length - 1) == 'P')
+//   {
+//     end_pos--
+//   }
+
+//   return str.substring(start_pos, end_pos);
+// }
+
+// console.log(nop("PythonP"));
+// console.log(nop("Python"));
+// console.log(nop("JavaScript"));
+
+//  Write a JavaScript program to create a new string taking the first and last n characters from a given string. The string length must be greater or equal to n.
+
+// const getNChar = (str) => {
+//   let n = 2;
+//   if ( str.length > 4 ) {
+//     return str.substring(0, n) + str.substring(str.length - n)
+//   }else return "Smile"
+// }
+
+// console.log(getNChar("JavaScript"))
+// console.log(getNChar("Java"))
+// console.log(getNChar("Python"))
+
+// function two_string(str, n)
+//   {
+//     first_part = str.substring(0, n);
+//     last_part = str.substring(str.length - n);
+//     return first_part + last_part;
+//  }
+
+// console.log(two_string("JavaScript", 2));
+// console.log(two_string("JavaScript", 3));
+// console.log(two_string("JavaScript", 12));
+
+//  Write a JavaScript program to check whether 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.
+
+// const someMethod = (arr) => {
+//   return arr.some(num =>  num === 1)
+// }
+
+// console.log(someMethod([1, 2, 3]))
+// console.log(someMethod([5, 2, 3]))
+// console.log(someMethod([4, 2, 1]))
+
+//  Write a JavaScript program to check whether the first and last elements are equal of a given array of integers length 3.
+
+// const someMethod = (arr) => {
+//   return arr[0] === arr[arr.length - 1]
+// }
+
+// console.log(someMethod([3, 2, 3]))
+// console.log(someMethod([5, 2, 3]))
+// console.log(someMethod([55, 2, 55]))
+// console.log(someMethod([1, 2, 1]))
+
+
+//  Write a JavaScript program to reverse the elements of a given array of integers length 3.
+
+// const reverseNum = (arr) => {
+//   return arr.reverse()
+// }
+
+// console.log(reverseNum([1, 2, 3, 4]))
+// console.log(reverseNum([5, 4, 3, 2]))
+// console.log(reverseNum([12, 2, 33, 4]))
+
+
+// function reverse3(array) {
+//   return array.map((element, idx, arr) => arr[(arr.length - 1) - idx]);
+// }
+
+// console.log(reverse3([5, 4, 3])); 
+// console.log(reverse3([1, 0, -1]));  
+// console.log(reverse3([2, 3, 1]));
+
+
+// Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.
+
+// const getMax = (arr) => {
+//   let largeNum =  arr[0] > arr[arr.length - 1] ? arr[0] : arr[arr.length - 1]
+//   // let largeNum = Math.max.apply(null, arr)
+//   return arr.map(a => a = largeNum)
+// }
+
+// console.log(getMax([11, 222, 33,]))
+// console.log(getMax([1, 222, 0,]))
+// console.log(getMax([1, 2, 3,]))

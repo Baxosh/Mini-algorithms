@@ -1,3 +1,4 @@
+console.clear()
 // function first_last(str1)
 //   {
 //   if (str1.length <= 1)
@@ -186,7 +187,7 @@
 // console.log(rangeNum(58, 45));
 // console.log(rangeNum(40, 60));
 
-//                               Write a JavaScript program to check a given string contains 2 to 4 numbers of a specified character.
+// Write a JavaScript program to check a given string contains 2 to 4 numbers of a specified character.
 
 // function check_char(str1, char)
 //  {
@@ -745,7 +746,6 @@ function maxLengthCheck(object)
 // console.log(someMethod([55, 2, 55]))
 // console.log(someMethod([1, 2, 1]))
 
-
 //  Write a JavaScript program to reverse the elements of a given array of integers length 3.
 
 // const reverseNum = (arr) => {
@@ -756,15 +756,13 @@ function maxLengthCheck(object)
 // console.log(reverseNum([5, 4, 3, 2]))
 // console.log(reverseNum([12, 2, 33, 4]))
 
-
 // function reverse3(array) {
 //   return array.map((element, idx, arr) => arr[(arr.length - 1) - idx]);
 // }
 
-// console.log(reverse3([5, 4, 3])); 
-// console.log(reverse3([1, 0, -1]));  
+// console.log(reverse3([5, 4, 3]));
+// console.log(reverse3([1, 0, -1]));
 // console.log(reverse3([2, 3, 1]));
-
 
 // Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.
 
@@ -777,3 +775,440 @@ function maxLengthCheck(object)
 // console.log(getMax([11, 222, 33,]))
 // console.log(getMax([1, 222, 0,]))
 // console.log(getMax([1, 2, 3,]))
+
+/// Write a JavaScript program to test whether an array of integers of length 2 contains 1 or a 3.
+
+// const getOneOrThree = (arr) => {
+//   return arr.length === 2 && arr.indexOf(1) == -1 && arr.indexOf(3)  == -1 ? true : false
+// }
+
+// console.log(getOneOrThree([1, 5]))
+// console.log(getOneOrThree([4, 3]))
+// console.log(getOneOrThree([4, 6]))
+
+// function is13(nums) {
+//   if (nums.indexOf(1) == -1 && nums.indexOf(3) == -1){
+//       return true;
+//   } else {
+//       return false;
+//   }
+// }
+
+// console.log(is13([7, 8]));
+// console.log(is13([3, 2]));
+// console.log(is13([0, 1]))
+
+// Write a JavaScript program to swap the first and last elements of a given array of integers. The array length should be at least 1.
+
+// const swapFirstAndLast = (arr) => {
+//   [arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]]
+//   return arr
+// }
+
+// console.log(swapFirstAndLast([1, 2, 3, 4, 5]))
+// console.log(swapFirstAndLast([5, 2, 3, 4, 2]))
+
+// Write a JavaScript program to add two digits of a given positive integer of length two.
+
+// function add_two_digits(n)
+//    {
+//       return n % 10 + Math.floor(n / 10);
+//    }
+// console.log(add_two_digits(25))
+// console.log(add_two_digits(50))
+
+// Write a JavaScript to add two positive integers without carry.
+
+// function add_two_int_without_carrying(n1, n2) {
+//   let result = 0;
+//   let x = 1;
+//   while (n1 > 0 && n2 > 0) {
+//       result += x * ((n1 + n2) % 10);
+//       n1 = Math.floor(n1 / 10);
+//       n2 = Math.floor(n2 / 10);
+//       x*= 10;
+//   }
+//   return result;
+// }
+// console.log(add_two_int_without_carrying(92645, 52665))
+// console.log(add_two_int_without_carrying(200, 900))
+
+// Write a JavaScript to find the longest string from an given array of strings.
+
+// const getLongestStr = (arr) => {
+//   var findLongest = arr.reduce((a, b) => (a.length > b.length ? a : b))
+
+//   console.log(findLongest)
+// }
+
+// getLongestStr(['aaa', 'aa', 'aaaa', 'aaaaa'])
+
+// function longest_string(str_ara) {
+//   var max = str_ara[0].length
+//   str_ara.map((v) => (max = Math.max(max, v.length)))
+//   result = str_ara.filter((v) => v.length == max)
+//   return result
+// }
+
+// console.log(longest_string(['a', 'aa', 'aaa', 'aaaaa', 'aaaa']))
+
+// Write a JavaScript to replace each character of a given string by the next one in the English alphabet.
+
+// Note: ‘a’ will be replace by ‘b’ or ‘z’ would be replaced by ‘a’.
+
+// function LetterChanges(str) {
+//   //https://goo.gl/R8gn7u
+//   var s = str.split('')
+//   for (var i = 0; i < s.length; i++) {
+//     // Caesar cipher
+//     switch (s[i]) {
+//       case ' ':
+//         break
+//       case 'z':
+//         s[i] = 'a'
+//         break
+//       case 'Z':
+//         s[i] = 'A'
+//         break
+//       case 'a':
+//         s[i] = 'z'
+//         break
+//       case 'A':
+//         s[i] = 'Z'
+//         break
+//       default:
+//         s[i] = String.fromCharCode(s[i].charCodeAt(0) - 1)
+//     }
+
+//     // Upper-case vowels
+//     // switch(s[i])
+//     // {
+//     //     case 'a': case 'e': case 'i': case 'o': case 'u':
+//     //     s[i] = s[i].toUpperCase();
+//     // }
+//   }
+//   return s.join('')
+// }
+
+// console.log(LetterChanges('PYTHON'))
+// console.log(LetterChanges('Baxodir'))
+// console.log(LetterChanges('Cbypejs'))
+// console.log(LetterChanges('php'))
+
+// Write a JavaScript code to divide a given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.
+
+// function alternate_Sums(arr) {
+//   var result = [0, 0];
+//   for(var i = 0; i < arr.length; i++)
+//   {
+//     if(i % 2) result[1] += arr[i];
+//     else
+//       result[0] += arr[i];
+//   }
+//   return result
+// }
+
+// console.log(alternate_Sums([1, 3, 6, 2, 5, 10]))
+// console.log(alternate_Sums([1, 5, 6, 2, 5, 12]))
+
+//   Write a JavaScript program to find the types of a given angle.
+
+//        Types of angles:
+//   • Acute angle: An angle between 0 and 90 degrees.
+//   • Right angle: An 90 degree angle.
+//   • Obtuse angle: An angle between 90 and 180 degrees.
+//   • Straight angle: A 180 degree angle.
+
+// const findTypesOfAngle = (a) => {
+//   if ( a >= 0 && a < 90 ) {
+//     console.log("It's " + "Acute angle " + a + " degree")
+//   }else if ( a === 90 ) {
+//     console.log("It's " + "Right angle " + a + " degree")
+//   }else if ( a > 90 && a < 180 ) {
+//     console.log("It's " + "Obtuse angle " + a + " degree")
+//   }else if ( a === 180 ) {
+//     console.log("It's " + "Straight angle " + a + " degree")
+//   }
+// }
+// findTypesOfAngle(0)
+// findTypesOfAngle(90)
+// findTypesOfAngle(120)
+// findTypesOfAngle(180)
+
+// Write a JavaScript program to check whether two arrays of integers of same length are similar or not. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.
+
+// function array_checking(array1, array2) {
+//   for (var i = 0; i < array1.length; i++) {
+//     for (var j = i; j < array1.length; j++) {
+//       var result = true,
+//         temp = array1[i]
+//       array1[i] = array1[j]
+//       array1[j] = temp
+//       for (var k = 0; k < array1.length; k++) {
+//         if (array1[k] !== array2[k]) {
+//           result = false
+//           break
+//         }
+//       }
+//       if (result) {
+//         return true
+//       }
+//       array1[j] = array1[i]
+//       array1[i] = temp
+//       console.log(array2)
+//     }
+//   }
+//   return false
+// }
+
+// console.log(array_checking([10, 20, 30], [10, 20, 30]))
+// console.log(array_checking([10, 20, 30], [30, 10, 20]))
+// console.log(array_checking([10, 20, 30, 40], [10, 30, 20, 40]))
+
+// Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.
+
+// function checking_numbers(x, y, divisor) {
+//   if(x % divisor === 0 && y % divisor === 0 || x % divisor !== 0 && y % divisor !==
+//     0) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// console.log(checking_numbers(10, 25, 5))
+// console.log(checking_numbers(10, 20, 5))
+// console.log(checking_numbers(10, 20, 4))
+
+// Write a JavaScript program to check whether it is possible to replace $ in a given expression x $ y = z with one of the four signs +, -, * or / to obtain a correct expression.
+
+// For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator (*) to obtain x * y = z
+
+// const expressionsFour = (x, y, z) => {
+//   if ( x + y === z || x - y === z || x * y === z || x / y === z ) {
+//     return true
+//   } return false
+// }
+// console.log(expressionsFour(15, 5, 20))
+// console.log(expressionsFour(3, 5, 20))
+// console.log(expressionsFour(10, 2, 20))
+
+// Write a JavaScript program to find the kth greatest element of a given array of integers.
+
+// function Kth_greatest_in_array(arr, k) {
+
+//   for (var i = 0; i < k; i++) {
+//     var max_index = i,
+//       tmp = arr[i];
+
+//     for (var j = i + 1; j < arr.length; j++) {
+//       if (arr[j] > arr[max_index]) {
+//         max_index = j;
+//       }
+//     }
+
+//     arr[i] = arr[max_index];
+//     arr[max_index] = tmp;
+//   }
+
+//   return arr[k - 1];
+// }
+
+// console.log(Kth_greatest_in_array([1,2,6,4,5], 3))
+// console.log(Kth_greatest_in_array([-10,-25,-47,-36,0], 1))
+
+// add tow elem of arr
+
+// function array_max_consecutive_sum(nums, k) {
+// let result = 0;
+// let nums = [1, 2, 4, 14, 5]
+// let k = 2;
+// let temp_sum = 0;
+// for (var i = 0; i < k - 1; i++) {
+// temp_sum += nums[i];
+// }
+// for (var i = k - 1; i < nums.length; i++) {
+//   temp_sum += nums[i];
+//   if (temp_sum > result) {
+//     result = temp_sum;
+// }
+// temp_sum -= nums[i - k + 1];
+// console.log(temp_sum)
+// console.log(nums[i])
+// }
+// console.log(temp_sum)
+// console.log(result)
+// }
+
+// console.log(array_max_consecutive_sum([1, 2, 3, 14, 5], 2))
+// console.log(array_max_consecutive_sum([2, 3, 5, 1, 6], 3))
+// console.log(array_max_consecutive_sum([9, 3, 5, 1, 7], 3))
+
+// Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers.
+
+// function array_max_consecutive_sum(nums, k) {
+//   let result = 0;
+//   let temp_sum = 0;
+//   for (var i = 0; i < k - 1; i++) {
+//     temp_sum += nums[i];
+//   }
+//   for (var i = k - 1; i < nums.length; i++) {
+//     temp_sum += nums[i];
+//     if (temp_sum > result) {
+//       result = temp_sum;
+//     }
+//     temp_sum -= nums[i - k + 1];
+//   }
+//   return result;
+// }
+
+// console.log(array_max_consecutive_sum([1, 2, 3, 14, 5], 2))
+// console.log(array_max_consecutive_sum([2, 3, 5, 1, 6], 3))
+// console.log(array_max_consecutive_sum([9, 3, 5, 1, 7], 3))
+
+// copy mine code
+
+// const array_max_consecutive_sum = (nums, k) => {
+//   let result = 0,
+//     temp_sum = 0
+
+//   for (let i = 0; i < k - 1; i++) {
+//     temp_sum += nums[i]
+//   }
+//   for (let i = k - 1; i < nums.length; i++) {
+//     temp_sum += nums[i]
+//     if (temp_sum > result) {
+//       result = temp_sum
+//     }
+//     temp_sum -= nums[i - k + 1]
+//   }
+//   return result
+// }
+
+// console.log(array_max_consecutive_sum([1, 2, 3, 14, 5], 2))
+// console.log(array_max_consecutive_sum([2, 3, 5, 1, 6], 3))
+// console.log(array_max_consecutive_sum([9, 3, 5, 1, 7], 3))
+
+// Write a JavaScript program to find the maximum difference between any two adjacent elements of a given array of integers.
+
+// const array_max_consecutive_sum = (nums) => {
+// let result = 0
+// let nums = [12, 2, -3, -14, 5]
+// let tempSum = 0
+// for ( let i = 0; i < nums.length - 1; i++ ) {
+//   tempSum += nums[i]
+//   if ( tempSum > result ) {
+//     let prev = nums[i + 1]
+//     let babe = nums[i - 1] - prev
+//     console.log(babe)
+//   }
+// }
+// }
+
+// console.log(array_max_consecutive_sum([-1, 2, -3, -14, 5]))
+// console.log(array_max_consecutive_sum([2, 3, 5, 1, 6]))
+// console.log(array_max_consecutive_sum([-9, 3, 5, 1, 7]))
+
+// function max_difference(arr) {
+// 	var max = -1;
+// var temp
+// 	for (var i = 0; i < arr.length - 1; i++)
+//       {
+// 		temp = Math.abs(arr[i] - arr[i + 1]);
+// 		max = Math.max(max, temp);
+// 	  }
+// 	return max;
+// }
+
+// console.log(max_difference([1, 2, -3, 8, 9]))
+// console.log(max_difference([1, 2, 3, -18, 9]))
+// console.log(max_difference([13, 2, 3, -8, 9]))
+
+// Write a JavaScript program to find the maximum difference among all possible pairs of a given array of integers.
+
+// function array_max_diff(arr) {
+//   var max_result = 0
+
+//   for (var i = 0; i < arr.length; i++) {
+//     for (var k = 0; k != i && k < arr.length; k++) {
+//       var diff = Math.abs(arr[i] - arr[k])
+//       max_result = Math.max(max_result, diff)
+//     }
+//   }
+//   return max_result
+// }
+// console.log(array_max_diff([1, 2, 3, 8, 10]))
+// console.log(array_max_diff([1, 2, 3, 16, 9]))
+// console.log(array_max_diff([11, 2, 3, 8, 9]))
+
+// const father = () => {
+//   return ({ name, age, lastName }) => {
+//     console.log(`${lastName} ${name}ni yoshi ${age}da.`)
+//   }
+// }
+
+// const user = { name: 'Baxodir', age: '20', lastName: 'Umarov' }
+
+// const person = father()
+
+// person(user)
+
+// Higher arrow func
+
+// const sum = (a) => (b) => (c) => a + b + c
+// console.log(sum(1)(2)(3))
+
+
+// Higher simple function 
+
+// function sum(a)  {
+//   return function (b) {
+//     return function (c) {
+//       return a + b + c
+//     }
+//   }
+// }
+
+// console.log(sum(1)(2)(3))
+
+// random array elem
+
+// let array = [ 'red', 'blue', 'yellow', 'sky', 'orange']
+
+// let newArray = array[Math.floor(Math.random() * array.length)]
+
+// console.log(newArray)
+
+// Shuffle bad way
+
+// let numbers = [2, 3, 4, 5, 6, 7, 8, 9,]
+// console.log(numbers)
+
+// const newNumbers = numbers.sort((a, b) => Math.random() - 0.5)
+// console.log(newNumbers)
+
+// Shuffle numbers of  best way
+
+// const numbers = (a) => {
+//   for(let i = a.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     [a[i], a[j]] = [a[j], a[i]]  } return a
+// }
+// console.log(numbers([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+// Sort alphabetically array 
+
+// var arr = ["red","orange","blue","green","red","blue"];
+
+// var sorted_arr = arr.slice().sort();
+
+// console.log(sorted_arr);
+
+// Write a JavaScript program to find the number which appears most in a given array of integers.
+
+const mostAppears = (arr) => {
+  return arr.filter((element, index) => arr.indexOf(element) !== index)
+}
+
+console.log(mostAppears([1, 2, 3, 3, 10, 5, 3, 2]))
+console.log(mostAppears([1, 2, 3, 16, 9, 9, 1, 1]))
+console.log(mostAppears([11, 2, 3, 8, 9, 2, 2, 22,]))
